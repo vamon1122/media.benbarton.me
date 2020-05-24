@@ -1,0 +1,347 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8C3A9372-A884-4197-B3ED-71CBE4D99652}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ParsnipWebsite</RootNamespace>
+    <AssemblyName>ParsnipWebsite</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BenLog">
+      <HintPath>..\BenLog .NET 4.0\BenLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="ParsnipData">
+      <HintPath>..\..\TheParsnipData\ParsnipData\bin\Debug\ParsnipData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Access_Denied.aspx" />
+    <Content Include="Css\Jonsuh_Hamburgers\Hamburgers.css" />
+    <Content Include="Css\Jonsuh_Hamburgers\Hamburgers.min.css" />
+    <Content Include="Css\MobileLandscapeStyle.css" />
+    <Content Include="Custom_Controls\Admin\AdminMenu.ascx" />
+    <Content Include="Custom_Controls\Media\MediaControl.ascx" />
+    <Content Include="Custom_Controls\Media\MediaTagPairControl.ascx" />
+    <Content Include="Custom_Controls\Media\MediaTagPairViewControl.ascx" />
+    <Content Include="Custom_Controls\Media\MediaUserPairControl.ascx" />
+    <Content Include="Custom_Controls\Media\MediaUserPairViewControl.ascx" />
+    <Content Include="Custom_Controls\Media\UploadMediaControl.ascx" />
+    <Content Include="Custom_Controls\Menu\Menu.ascx" />
+    <Content Include="Custom_Controls\Uac\AdminUserForm.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Edit_Media.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Get_Device_Info.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="home.html" />
+    <Content Include="Javascript\ApplyStyle.js" />
+    <Content Include="Javascript\Clipboard.js" />
+    <Content Include="Javascript\CountDownToKrakow.js" />
+    <Content Include="Javascript\FocusImage.js" />
+    <Content Include="Javascript\LazyImages.js" />
+    <Content Include="Javascript\UsefulFunctions.js" />
+    <Content Include="Javascript\Youtube.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="Manage_Media.aspx" />
+    <Content Include="Manage_Users.aspx" />
+    <Content Include="Me.aspx" />
+    <Content Include="package.json" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\Publish To Folder.pubxml" />
+    <None Include="Properties\PublishProfiles\Publish To Live.pubxml" />
+    <Content Include="Admin.aspx" />
+    <Content Include="Javascript\IntersectionObserver.js" />
+    <Content Include="Logs.aspx" />
+    <Content Include="Share_Stats.aspx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Css\MobilePortraitStyle.css" />
+    <Content Include="Css\DesktopStyle.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Css\SharedStyle.css" />
+    <Content Include="View.aspx" />
+    <Content Include="Tag.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="_TEMPLATE.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Access_Denied.aspx.cs">
+      <DependentUpon>Access_Denied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Access_Denied.aspx.designer.cs">
+      <DependentUpon>Access_Denied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Custom_Controls\Admin\AdminMenu.ascx.cs">
+      <DependentUpon>AdminMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Custom_Controls\Admin\AdminMenu.ascx.designer.cs">
+      <DependentUpon>AdminMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Custom_Controls\Media\MediaControl.ascx.cs">
+      <DependentUpon>MediaControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Custom_Controls\Media\MediaControl.ascx.designer.cs">
+      <DependentUpon>MediaControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Custom_Controls\Media\MediaTagPairControl.ascx.cs">
+      <DependentUpon>MediaTagPairControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Custom_Controls\Media\MediaTagPairControl.ascx.designer.cs">
+      <DependentUpon>MediaTagPairControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Custom_Controls\Media\MediaTagPairViewControl.ascx.cs">
+      <DependentUpon>MediaTagPairViewControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Custom_Controls\Media\MediaTagPairViewControl.ascx.designer.cs">
+      <DependentUpon>MediaTagPairViewControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Custom_Controls\Media\MediaUserPairControl.ascx.cs">
+      <DependentUpon>MediaUserPairControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Custom_Controls\Media\MediaUserPairControl.ascx.designer.cs">
+      <DependentUpon>MediaUserPairControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Custom_Controls\Media\MediaUserPairViewControl.ascx.cs">
+      <DependentUpon>MediaUserPairViewControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Custom_Controls\Media\MediaUserPairViewControl.ascx.designer.cs">
+      <DependentUpon>MediaUserPairViewControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Custom_Controls\Media\UploadMediaControl.ascx.cs">
+      <DependentUpon>UploadMediaControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Custom_Controls\Media\UploadMediaControl.ascx.designer.cs">
+      <DependentUpon>UploadMediaControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Custom_Controls\Menu\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Custom_Controls\Menu\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Custom_Controls\Uac\AdminUserForm.ascx.cs">
+      <DependentUpon>AdminUserForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Custom_Controls\Uac\AdminUserForm.ascx.designer.cs">
+      <DependentUpon>AdminUserForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Media.aspx.cs">
+      <DependentUpon>Edit_Media.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Edit_Media.aspx.designer.cs">
+      <DependentUpon>Edit_Media.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Get_Device_Info.aspx.cs">
+      <DependentUpon>Get_Device_Info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Get_Device_Info.aspx.designer.cs">
+      <DependentUpon>Get_Device_Info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Data.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logs.aspx.cs">
+      <DependentUpon>Logs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logs.aspx.designer.cs">
+      <DependentUpon>Logs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_Media.aspx.cs">
+      <DependentUpon>Manage_Media.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage_Media.aspx.designer.cs">
+      <DependentUpon>Manage_Media.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_Users.aspx.cs">
+      <DependentUpon>Manage_Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage_Users.aspx.designer.cs">
+      <DependentUpon>Manage_Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Me.aspx.cs">
+      <DependentUpon>Me.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Me.aspx.designer.cs">
+      <DependentUpon>Me.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Share_Stats.aspx.cs">
+      <DependentUpon>Share_Stats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Share_Stats.aspx.designer.cs">
+      <DependentUpon>Share_Stats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View.aspx.cs">
+      <DependentUpon>View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View.aspx.designer.cs">
+      <DependentUpon>View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tag.aspx.cs">
+      <DependentUpon>Tag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tag.aspx.designer.cs">
+      <DependentUpon>Tag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="_TEMPLATE.aspx.cs">
+      <DependentUpon>_TEMPLATE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_TEMPLATE.aspx.designer.cs">
+      <DependentUpon>_TEMPLATE.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58646</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58646/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

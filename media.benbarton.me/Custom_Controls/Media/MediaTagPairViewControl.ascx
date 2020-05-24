@@ -1,0 +1,4 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MediaTagPairViewControl.ascx.cs" Inherits="media.benbarton.me.Custom_Controls.Media.MediaTagPairViewControl" %>
+<a runat="server" id="ViewButtonLink" style="color:inherit; text-decoration:none; display:inline-block; margin-bottom:5px">
+    <button runat="server" id="ViewButton" type="button" class="btn btn-warning" data-toggle="modal" style="display:inline-block;"></button>
+</a>
